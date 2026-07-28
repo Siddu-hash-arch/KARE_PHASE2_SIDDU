@@ -5,6 +5,6 @@ public class index {
 }
 public class index {
     public static void main(String[] args) {
-        System.out.println("CSE\n\"KARE\" \nstudents");
+        System.out.println("\\n");
     }
 }
