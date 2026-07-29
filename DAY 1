@@ -1,14 +1,14 @@
-public class index {
+1)public class index {
     public static void main(String[] args) {
         System.out.println("cse \"KARE\" students");
     }
 }
-public class index {
+2)public class index {
     public static void main(String[] args) {
         System.out.println("\\n");
     }
 }
-import java.util.Scanner;
+3)import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
         System.out.println("Enter a number:");
@@ -17,7 +17,7 @@ public class index {
         System.out.println(a);
     }
 }
-//write java program to print double input from user and printed
+4)//write java program to print double input from user and printed
 import java.util.*;
 class Main{
     public static  void main(String args[]){
@@ -25,4 +25,44 @@ class Main{
         double d = sc.nextDouble();
         System.out.print(d);
     }
+}
+5)
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        char ch=sc.next().charAt(0);
+        System.out.println("The character is :"+ch);
+    }
+
+}
+
+
+
+6)
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        float f=sc.nextFloat();
+        System.out.printf("%.2f",f);
+    }
+
+}
+
+7)//write a java proram to print double input from user and print it.
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        double d=sc.nextDouble();
+        System.out.print(d);
+    }
+
 }
