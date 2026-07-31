@@ -1,0 +1,70 @@
+//write java programe *****\n*****\n*****\n*****\n*****
+/base-1 pattern
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+
+
+//write java programe *\n**\n***\n****\n*****
+//base 2 patter
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<=row;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+
+
+//write java programe *****\n****\n***\n**\n*
+base 3 pattern
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n-row;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+
+
+//write java programe *\n***\n*****\n*******
+base 4 paatern
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<2*row-1;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
