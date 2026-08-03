@@ -71,3 +71,26 @@ public class Main {
         
     }
 }
+//write a java program TO check the given number is harshad num or not ex:18
+//1)get the user i/p n=18
+//2)find the sum of digits sum==9 1+8==9
+//3)to check the given num is completely divisable by  sum of digits 18%9==0
+//4)if it is true print harshad number
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,temp=n,ans=0;
+        while(n!=0){
+            d=n%10;
+            ans+=d;
+            n=n/10;
+        }
+        if (temp%ans==0)
+            System.out.println("Harshad number");
+        else
+            System.out.println("not a Harshad number");
+        
+    }
+}
