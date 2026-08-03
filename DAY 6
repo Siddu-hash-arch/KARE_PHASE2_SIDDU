@@ -52,3 +52,22 @@ public class Main {
         
     }
 }
+//write a java program TO print a num is palindrome or not
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,temp=n,ans=0;
+        while(n!=0){
+            d=n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        if (ans==temp)
+            System.out.println("its a palindrome number");
+        else
+            System.out.println("its not a palindrome number");
+        
+    }
+}
