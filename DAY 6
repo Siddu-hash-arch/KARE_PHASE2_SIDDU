@@ -1,0 +1,21 @@
+//write a java program to count the odd even digits in a given number.
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int odd=0,even=0,d;
+        while(n!=0){
+            d=n%10;
+            if(d%2==0)
+                even++;
+            else
+                odd++;
+            n=n/10;
+        }
+        System.out.println("even count is : "+even+"   odd count is: "+odd);
+        
+    }
+}
