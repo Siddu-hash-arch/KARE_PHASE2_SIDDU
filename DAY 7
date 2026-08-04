@@ -4,6 +4,8 @@
 //3)find sum of the factorial value sum=1+24+120=145
 //4)compare sum and given number
 //5)if sum ==n  print strong number 
+145
+Strong number
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
