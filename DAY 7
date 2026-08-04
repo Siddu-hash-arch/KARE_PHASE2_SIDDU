@@ -1,0 +1,27 @@
+//write a java program TO check the given number is strong number or not ex:
+//1)get the i/p from user i/p n=145
+//2)find the factorial each digit the given number
+//3)find sum of the factorial value sum=1+24+120=145
+//4)compare sum and given number
+//5)if sum ==n  print strong number 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int fact=1,d,temp=n,sum=0;
+        while(n!=0){
+            fact=1;
+            d=n%10;
+            for(int i=1;i<=d;i++){
+                fact=fact*i;
+            }
+            sum+=fact;
+            n=n/10;
+        }
+        if (sum==temp)
+            System.out.println("Strong number");
+        else
+            System.out.println("not a Strong number");
+    }
+}
