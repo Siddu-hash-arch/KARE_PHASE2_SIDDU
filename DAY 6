@@ -94,3 +94,29 @@ public class Main {
         
     }
 }
+//write a java program TO check the given number is perfect num or not ex:18
+//1)get the i/p from user i/p n=6
+//2)find the factor of n value including 1 excluding the given number
+//3)find sum of the factors sum=1+2+3=6
+//4)compare sum and given number
+//if both are equal print perfect number 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp=n,sum=0;
+        
+        for (int i=1;i<n;i++){
+            if (n%i==0){
+                sum+=i;
+            }
+        }
+    
+        if (sum==temp)
+            System.out.println("perfect number");
+        else
+            System.out.println("not a perfect number");
+        
+    }
+}
