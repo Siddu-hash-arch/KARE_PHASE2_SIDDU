@@ -57,3 +57,35 @@ public class Main {
             System.out.println("not a ArmStrong number");
     }
 }
+//write a java program TO check the given number is adam number or not ex:
+//1)get the i/p from user i/p n=12
+//2)find the square of the given number 12*12=144
+//3)find the reverse of given num 21
+//4)find the square of the reverse num 21*21=441
+//5)reverse the square of reverse number 144
+//6)sn==rsrn if both are equal print adam number
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,d1,ans=0,sqrn,rsqrn=0;
+        int sn=n*n;
+        while(n!=0){
+            d=n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        sqrn=ans*ans;
+        while(sqrn!=0){
+            d1=sqrn%10;
+            rsqrn=rsqrn*10+d1;
+            sqrn=sqrn/10;
+        }
+        if (sn==rsqrn)
+            System.out.println("Adam number");
+        else
+            System.out.println("not a Adam number");
+    }
+}
