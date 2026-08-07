@@ -150,3 +150,34 @@ public class Main {
         System.out.println(c);
     }
 }
+//write the java programe to print no of words contain the string
+siddu   
+1
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        int c=1;
+        for(char ch : s.toCharArray()){
+            if(ch==' ')
+                c++;
+        }
+        System.out.println(c);
+    }
+}
+//write the java programe to print consonents count in the string
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine().toUpperCase();
+        int o=0,c=0;
+        for(char ch : s.toCharArray()){
+            if(!(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'))
+                o++;
+        }
+        System.out.println(o);
+    }
+}
