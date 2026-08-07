@@ -1,0 +1,62 @@
+//write the java programe to print 2d array
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter no of rows");
+        int row = sc.nextInt();
+        System.out.println("Enter no of cols");
+        int col = sc.nextInt();
+        int [][] arr=new int[row][col];
+        System.out.println("Enter array elements");
+        
+        for (int i =0;i<row;i++){
+            for(int j=0;j<col;j++){
+                arr[i][j]=sc.nextInt();
+
+            }
+        }
+        for (int i =0;i<row;i++){
+            for(int j=0;j<col;j++){
+                System.out.print(arr[i][j]+" ");
+
+            }System.out.println();
+        }
+    }
+}
+//write the java programe to print sum of elements in 2d array
+Enter no of rows
+2
+Enter no of cols
+2
+Enter array elements
+1 2 3 4
+10
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter no of rows");
+        int row = sc.nextInt();
+        System.out.println("Enter no of cols");
+        int col = sc.nextInt();
+        int [][] arr=new int[row][col];
+        System.out.println("Enter array elements");
+        
+        for (int i =0;i<row;i++){
+            for(int j=0;j<col;j++){
+                arr[i][j]=sc.nextInt();
+
+            }
+        }
+        int sum=0;
+        for (int i =0;i<row;i++){
+            for(int j=0;j<col;j++){
+                sum+=arr[i][j];
+
+            }
+        }
+        System.out.println(sum);    
+    }
+}
