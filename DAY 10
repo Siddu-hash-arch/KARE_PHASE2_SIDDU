@@ -181,3 +181,23 @@ public class Main {
         System.out.println(o);
     }
 }
+//write the java programe to print reverse string
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        char ch[]=s.toCharArray();
+        int len=s.length()-1;
+        int si=0;
+        while(si<len){
+            char temp=ch[si];
+            ch[si]=ch[len];
+            ch[len]=temp;
+            si++;
+            len--;
+        }
+        System.out.println(ch);
+    }
+}
