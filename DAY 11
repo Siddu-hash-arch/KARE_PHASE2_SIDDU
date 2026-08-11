@@ -1,0 +1,48 @@
+class Father{
+    void gen2(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.println("Silver");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Son obj=new Son();
+        Father obj1=new Father();
+        obj1.gen2();
+        obj.gen2();
+        obj.gen3();
+    }
+}
+MultiLevel
+class GrandFather{
+    void gen1(){
+        System.out.println("Diamond");
+    }
+}
+class Father extends GrandFather{
+    void gen2(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.println("Silver");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Son obj=new Son();
+        obj.gen1();
+        obj.gen2();
+        obj.gen3();
+        Father obj1=new Father();
+        obj1.gen1();
+        obj1.gen2();
+        GrandFather obj2=new GrandFather();
+        obj2.gen1();
+    }
+}
