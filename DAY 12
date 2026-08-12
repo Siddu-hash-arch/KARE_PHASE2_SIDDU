@@ -54,3 +54,25 @@ public class Main {
         obj.perfectsquare();
     }
 }
+//write a java programe to check the specific num is power of 2 or not 
+// by using fuction with  argument no return type
+
+import java.util.Scanner;
+
+public class Main {
+    void poweroftwo(int n){
+        while(n%2==0){
+            n=n/2;
+        }
+        if(n==1)
+            System.out.println("a power of 2");
+        else
+            System.out.println("Not a power of 2");
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Main obj=new Main();
+        obj.poweroftwo(n);
+    }
+}
