@@ -1,0 +1,32 @@
+//Hybrid Inheritance
+class GrandFather{
+    void gen1(){
+        System.out.println("Diamond");
+    }
+}
+class Father extends GrandFather{
+    void gen21(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.println("Silver");
+    }
+}
+class Mother extends Father{
+    void gen22(){
+        System.out.println("money");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Son obj1=new Son();
+        obj1.gen1();
+        obj1.gen21();
+        obj1.gen3();
+        Mother obj=new Mother();
+        obj.gen21();
+        obj.gen22();
+    }
+}
