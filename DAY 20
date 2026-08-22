@@ -1,0 +1,317 @@
+// 1) Add elements to ArrayList and find the sum
+// Input:
+// 5
+// 10 20 30 40 50
+// Output:
+// [10, 20, 30, 40, 50]
+// Sum: 150
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> obj = new ArrayList<>();
+
+        int n = sc.nextInt();
+
+        int sum = 0;
+
+        for(int i = 0; i < n; i++) {
+            int a = sc.nextInt();
+            obj.add(a);
+            sum = sum + a;
+        }
+
+        System.out.println(obj);
+        System.out.println("Sum: " + sum);
+    }
+}
+
+
+// 2) Find maximum and minimum in ArrayList
+// Input:
+// 5
+// 25 10 45 5 30
+// Output:
+// Maximum: 45
+// Minimum: 5
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> obj = new ArrayList<>();
+
+        int n = sc.nextInt();
+
+        for(int i = 0; i < n; i++) {
+            obj.add(sc.nextInt());
+        }
+
+        int max = obj.get(0);
+        int min = obj.get(0);
+
+        for(int i = 1; i < obj.size(); i++) {
+            if(obj.get(i) > max) {
+                max = obj.get(i);
+            }
+
+            if(obj.get(i) < min) {
+                min = obj.get(i);
+            }
+        }
+
+        System.out.println("Maximum: " + max);
+        System.out.println("Minimum: " + min);
+    }
+}
+
+
+// 3) Search an element in ArrayList
+// Input:
+// 5
+// 10 20 30 40 50
+// 30
+// Output:
+// Element found at index: 2
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> obj = new ArrayList<>();
+
+        int n = sc.nextInt();
+
+        for(int i = 0; i < n; i++) {
+            obj.add(sc.nextInt());
+        }
+
+        int target = sc.nextInt();
+
+        int index = obj.indexOf(target);
+
+        if(index != -1) {
+            System.out.println("Element found at index: " + index);
+        }
+        else {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+
+// 4) Remove an element from ArrayList
+// Input:
+// 5
+// 10 20 30 40 50
+// 30
+// Output:
+// [10, 20, 40, 50]
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> obj = new ArrayList<>();
+
+        int n = sc.nextInt();
+
+        for(int i = 0; i < n; i++) {
+            obj.add(sc.nextInt());
+        }
+
+        int value = sc.nextInt();
+
+        if(obj.contains(value)) {
+            obj.remove(Integer.valueOf(value));
+            System.out.println(obj);
+        }
+        else {
+            System.out.println("Element not found");
+        }
+    }
+}
+
+
+// 5) Reverse an ArrayList
+// Input:
+// 5
+// 10 20 30 40 50
+// Output:
+// [50, 40, 30, 20, 10]
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> obj = new ArrayList<>();
+
+        int n = sc.nextInt();
+
+        for(int i = 0; i < n; i++) {
+            obj.add(sc.nextInt());
+        }
+
+        Collections.reverse(obj);
+
+        System.out.println(obj);
+    }
+}
+
+
+// 6) Sort an ArrayList
+// Input:
+// 6
+// 40 10 60 20 50 30
+// Output:
+// [10, 20, 30, 40, 50, 60]
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<Integer> obj = new ArrayList<>();
+
+        int n = sc.nextInt();
+
+        for(int i = 0; i < n; i++) {
+            obj.add(sc.nextInt());
+        }
+
+        Collections.sort(obj);
+
+        System.out.println(obj);
+    }
+}
+
+//program to create a ArrayList.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList obj=new ArrayList();
+		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		obj.add(2.5);
+		obj.add('G');
+		obj.add("Chandu");
+		System.out.print(obj);
+	}
+}
+
+Output:
+[10, 20, 30, 2.5, G, Chandu]
+
+
+//program to create a ArrayList with Integer datatype
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList<Integer> obj=new ArrayList<>();
+		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		System.out.print(obj);
+	}
+}
+
+Output:
+[10, 20, 30]
+
+
+//program to create a ArrayList by taking the input from the user.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList<Integer> obj=new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=0;i<n;i++){
+		    obj.add(sc.nextInt());
+		}
+		System.out.print(obj);
+	}
+}
+
+Output:
+5
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+
+
+//program for LinkedList
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		LinkedList obj=new LinkedList();
+		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		obj.add(2,100);
+		obj.addFirst(5);
+		obj.addLast(150);
+		System.out.println(obj.get(1));
+		System.out.println(obj.getFirst());
+		System.out.println(obj.getLast());
+		System.out.println(obj);
+		System.out.println("Enter the index and value:");
+		int index=sc.nextInt();
+		int value=sc.nextInt();
+		System.out.println(obj.set(index,value));
+		System.out.println(obj);
+		obj.remove();
+		System.out.println(obj);
+		obj.remove(1);
+		System.out.println(obj);
+		obj.removeLast();
+		System.out.println(obj);
+		System.out.println(obj.contains(100));
+		System.out.println(obj.size());
+		obj.clear();
+		System.out.println(obj.isEmpty());
+		System.out.println(obj.indexOf(5));
+		System.out.println(obj);
+	}
+}
+
+Output:
+10
+5
+150
+[5, 10, 20, 100, 30, 150]
+Enter the index and value:
+1 50
+10
+[5, 50, 20, 100, 30, 150]
+[50, 20, 100, 30, 150]
+[50, 100, 30, 150]
+[50, 100, 30]
+true
+3
+true
+-1
+[]
