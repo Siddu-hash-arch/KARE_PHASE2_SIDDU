@@ -21,7 +21,7 @@ Output:
 100 98 98 99 97 99
 
 
-//program for conditional statement - if/else.
+2)//program for conditional statement - if/else.
 public class Main{
     public static void main(String args[]){
         if(true)
@@ -35,7 +35,7 @@ Output:
 hi
 
 
-//program for conditional statement - if/else.
+3)//program for conditional statement - if/else.
 public class Main{
     public static void main(String args[]){
         int n = 3;
@@ -50,7 +50,7 @@ Output:
 -5
 
 
-//program for conditional statement - if/else.
+4)//program for conditional statement - if/else.
 public class Main{
     public static void main(String args[]){
         if(!true)
@@ -64,7 +64,7 @@ Output:
 25
 
 
-//program for conditional statement - if/else with error.
+5)//program for conditional statement - if/else with error.
 public class Main{
     public static void main(String args[]){
         if(2+2==4)
@@ -80,7 +80,7 @@ Main.java:7: error: 'else' without 'if'
         else
         ^
 1 error
-//write a java programe to print a number is odd or even
+6)//write a java programe to print a number is odd or even
 import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
@@ -94,7 +94,7 @@ public class index {
     }
 }
 
-//write java programe to check wheather person is eligable to vote or not
+7)//write java programe to check wheather person is eligable to vote or not
 import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
@@ -108,7 +108,7 @@ public class index {
 }
 //i/p 9       o/p Divisable by 3
 //i/p 11      o/p not divisable by 3 and remainder is 2
-import java.util.Scanner;
+8)import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -121,7 +121,7 @@ public class index {
 }
 //i/p 12 10       o/p 12 is Greater than 10 
 //i/p 3 56      o/p 56 is Greater than 3
-import java.util.Scanner;
+9)import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -138,7 +138,7 @@ public class index {
 }
 //i/p 12 10 34      o/p 10 is smaller 
 //i/p 3 56  1    o/p 1 is smaller
-import java.util.Scanner;
+10)import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -154,7 +154,7 @@ public class index {
     }
 }
 ///railway timeing
-import java.util.Scanner;
+11)import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -170,7 +170,7 @@ public class index {
     }
 }
 ///leap year
-import java.util.Scanner;
+12)import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
