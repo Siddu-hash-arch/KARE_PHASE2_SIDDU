@@ -67,7 +67,7 @@ public class Main{
 
 }
 
-//write java programe to find the sum of elements in given range
+8)//write java programe to find the sum of elements in given range
 import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
@@ -80,7 +80,7 @@ public class index {
             System.out.print(res+" ");
     }
 }
-//write java programe to find factors of given number
+9)//write java programe to find factors of given number
 import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
@@ -94,7 +94,7 @@ public class index {
 
     }
 }
-//write java programe to find factorial of a given number
+10)//write java programe to find factorial of a given number
 import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
@@ -109,7 +109,7 @@ public class index {
 
     }
 }
-//write java programe to print multiplication table
+11)//write java programe to print multiplication table
 import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
@@ -121,7 +121,7 @@ public class index {
 
     }
 }
-//write java programe to print multiplication table without *
+12)//write java programe to print multiplication table without *
 import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
