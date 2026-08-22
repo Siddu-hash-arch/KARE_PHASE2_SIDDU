@@ -1,0 +1,57 @@
+import java.util.*;
+public class skill {
+    public static void main(String[] args) {
+       
+        Scanner sc=new Scanner(System.in);
+        ArrayList obj=new ArrayList<>();
+        for(int i=1;i<10;i++){
+            if(i%2==0)
+            obj.add(i);
+        }
+        System.out.println(obj);
+    }
+}
+Linked List using Collections
+import java.util.*;
+public class skill {
+    public static void main(String[] args) {
+       
+        Scanner sc=new Scanner(System.in);
+        LinkedList obj=new LinkedList<>();
+        for(int i=1;i<10;i++){
+            if(i%2==0)
+            obj.add(i);
+        }
+        System.out.println(obj);
+    }
+}
+operations on linked list
+import java.util.*;
+public class skill {
+    public static void main(String[] args) {
+       
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        LinkedList obj=new LinkedList<>();
+        
+        for(int i=0;i<n;i++){
+            int a=sc.nextInt();
+            obj.add(a);
+        }
+        System.out.println(obj);
+        System.out.print("type the index and value to replace");
+        int ind=sc.nextInt(),val=sc.nextInt();
+        obj.set(ind, val);
+        System.out.println("updated list"+obj);
+        System.out.print("name the ele to add at first");
+        int d=sc.nextInt();
+        obj.addFirst(d);
+        System.out.println(obj);
+        System.out.print("name the last ele to add");
+        int l=sc.nextInt();
+        obj.addLast(l);
+        System.out.println(obj);
+        System.out.println(obj.getFirst());
+        System.out.println(obj.getLast());
+    }
+}
