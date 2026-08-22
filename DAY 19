@@ -1,0 +1,471 @@
+// 1) Print Adjacency Matrix of Directed Graph
+// Input:
+// 5 5
+// 0 1
+// 0 2
+// 1 2
+// 2 3
+// 3 4
+//
+// Output:
+// 0 1 1 0 0
+// 0 0 1 0 0
+// 0 0 0 1 0
+// 0 0 0 0 1
+// 0 0 0 0 0
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+        }
+
+        for(int i = 0; i < V; i++) {
+            for(int j = 0; j < V; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+// 2) Find Degree of Each Vertex in Undirected Graph
+// Input:
+// 4 4
+// 0 1
+// 0 2
+// 1 2
+// 2 3
+//
+// Output:
+// Vertex 0 degree: 2
+// Vertex 1 degree: 2
+// Vertex 2 degree: 3
+// Vertex 3 degree: 1
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        for(int i = 0; i < V; i++) {
+            int degree = 0;
+
+            for(int j = 0; j < V; j++) {
+                if(matrix[i][j] == 1) {
+                    degree++;
+                }
+            }
+
+            System.out.println("Vertex " + i + " degree: " + degree);
+        }
+    }
+}
+
+
+// 3) Count Total Edges in Undirected Graph
+// Input:
+// 5 5
+// 0 1
+// 0 2
+// 1 2
+// 2 3
+// 3 4
+//
+// Output:
+// Total Edges: 5
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        int count = 0;
+
+        for(int i = 0; i < V; i++) {
+            for(int j = i + 1; j < V; j++) {
+                if(matrix[i][j] == 1) {
+                    count++;
+                }
+            }
+        }
+
+        System.out.println("Total Edges: " + count);
+    }
+}
+
+
+// 4) Check Whether Two Vertices are Connected Directly
+// Input:
+// 5 5
+// 0 1
+// 0 2
+// 1 2
+// 2 3
+// 3 4
+// 1 3
+//
+// Output:
+// Vertices are not directly connected
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        if(matrix[a][b] == 1) {
+            System.out.println("Vertices are directly connected");
+        }
+        else {
+            System.out.println("Vertices are not directly connected");
+        }
+    }
+}
+
+
+// 5) Count Isolated Vertices
+// Input:
+// 5 3
+// 0 1
+// 1 2
+// 3 4
+//
+// Output:
+// Isolated Vertices: 0
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        int count = 0;
+
+        for(int i = 0; i < V; i++) {
+            int degree = 0;
+
+            for(int j = 0; j < V; j++) {
+                degree = degree + matrix[i][j];
+            }
+
+            if(degree == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Isolated Vertices: " + count);
+    }
+}
+
+
+// 6) Find Vertex With Maximum Degree
+// Input:
+// 5 5
+// 0 1
+// 0 2
+// 1 2
+// 2 3
+// 3 4
+//
+// Output:
+// Vertex with maximum degree: 2
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        int maxDegree = -1;
+        int vertex = -1;
+
+        for(int i = 0; i < V; i++) {
+            int degree = 0;
+
+            for(int j = 0; j < V; j++) {
+                degree = degree + matrix[i][j];
+            }
+
+            if(degree > maxDegree) {
+                maxDegree = degree;
+                vertex = i;
+            }
+        }
+
+        System.out.println("Vertex with maximum degree: " + vertex);
+    }
+}
+
+
+// 7) Print Neighbours of a Given Vertex
+// Input:
+// 5 5
+// 0 1
+// 0 2
+// 1 2
+// 2 3
+// 3 4
+// 2
+//
+// Output:
+// Neighbours of vertex 2:
+// 0 1 3
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        int vertex = sc.nextInt();
+
+        System.out.println("Neighbours of vertex " + vertex + ":");
+
+        for(int i = 0; i < V; i++) {
+            if(matrix[vertex][i] == 1) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+
+// 8) Check Whether Graph Has a Self Loop
+// Input:
+// 4 4
+// 0 1
+// 1 2
+// 2 2
+// 2 3
+//
+// Output:
+// Graph contains self loop
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        int flag = 0;
+
+        for(int i = 0; i < V; i++) {
+            if(matrix[i][i] == 1) {
+                flag = 1;
+                break;
+            }
+        }
+
+        if(flag == 1) {
+            System.out.println("Graph contains self loop");
+        }
+        else {
+            System.out.println("Graph does not contain self loop");
+        }
+    }
+}
+
+
+// 9) Count Vertices With Even Degree
+// Input:
+// 5 5
+// 0 1
+// 0 2
+// 1 2
+// 2 3
+// 3 4
+//
+// Output:
+// Vertices with even degree: 3
+
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+
+        int matrix[][] = new int[V][V];
+
+        for(int i = 0; i < E; i++) {
+            int u = sc.nextInt();
+            int v = sc.nextInt();
+
+            matrix[u][v] = 1;
+            matrix[v][u] = 1;
+        }
+
+        int count = 0;
+
+        for(int i = 0; i < V; i++) {
+            int degree = 0;
+
+            for(int j = 0; j < V; j++) {
+                degree = degree + matrix[i][j];
+            }
+
+            if(degree % 2 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Vertices with even degree: " + count);
+    }
+}
+//10)program to print matrix of undirected graphs.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of vertices and edges: ");
+		int V=sc.nextInt();
+		int E = sc.nextInt();
+		int[][] matrix = new int[V][V];
+		for(int i=0;i<E;i++){
+		    int u=sc.nextInt();
+		    int v=sc.nextInt();
+		    matrix[u][v]=1;
+		    matrix[v][u]=1;
+		}
+		for(int i=0;i<V;i++){
+		    for(int j=0;j<E;j++){
+		        System.out.print(matrix[i][j]+" ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+Output:
+5 5
+0 1
+0 2
+1 2
+2 3
+3 4
+0 1 1 0 0 
+1 0 1 0 0 
+1 1 0 1 0 
+0 0 1 0 1 
+0 0 0 1 0 
