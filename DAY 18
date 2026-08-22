@@ -1,0 +1,767 @@
+// 1) Stack - Sum of Elements
+// Input:
+// 5
+// 10 20 30 40 50
+// Output:
+// Sum of Elements: 150
+
+import java.util.*;
+
+class Stack {
+    int top;
+    int arr[];
+    int n;
+
+    Stack(int n) {
+        this.n = n;
+        top = -1;
+        arr = new int[n];
+    }
+
+    void push(int d) {
+        if(top == n-1) {
+            System.out.println("Overflow");
+            return;
+        }
+        arr[++top] = d;
+    }
+
+    void sum() {
+        int sum = 0;
+
+        for(int i = 0; i <= top; i++) {
+            sum = sum + arr[i];
+        }
+
+        System.out.println("Sum of Elements: " + sum);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Stack s = new Stack(n);
+
+        for(int i = 0; i < n; i++) {
+            s.push(sc.nextInt());
+        }
+
+        s.sum();
+    }
+}
+
+
+// 2) Stack - Count Positive and Negative Elements
+// Input:
+// 6
+// 10 -20 30 -40 50 -60
+// Output:
+// Positive Elements: 3
+// Negative Elements: 3
+
+import java.util.*;
+
+class Stack {
+    int top;
+    int arr[];
+    int n;
+
+    Stack(int n) {
+        this.n = n;
+        top = -1;
+        arr = new int[n];
+    }
+
+    void push(int d) {
+        if(top == n-1) {
+            System.out.println("Overflow");
+            return;
+        }
+        arr[++top] = d;
+    }
+
+    void count() {
+        int positive = 0;
+        int negative = 0;
+
+        for(int i = 0; i <= top; i++) {
+            if(arr[i] >= 0) {
+                positive++;
+            }
+            else {
+                negative++;
+            }
+        }
+
+        System.out.println("Positive Elements: " + positive);
+        System.out.println("Negative Elements: " + negative);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Stack s = new Stack(n);
+
+        for(int i = 0; i < n; i++) {
+            s.push(sc.nextInt());
+        }
+
+        s.count();
+    }
+}
+
+
+// 3) Stack - Search an Element
+// Input:
+// 5
+// 10 20 30 40 50
+// 30
+// Output:
+// Element found
+
+import java.util.*;
+
+class Stack {
+    int top;
+    int arr[];
+    int n;
+
+    Stack(int n) {
+        this.n = n;
+        top = -1;
+        arr = new int[n];
+    }
+
+    void push(int d) {
+        if(top == n-1) {
+            System.out.println("Overflow");
+            return;
+        }
+        arr[++top] = d;
+    }
+
+    void search(int target) {
+        for(int i = top; i >= 0; i--) {
+            if(arr[i] == target) {
+                System.out.println("Element found");
+                return;
+            }
+        }
+
+        System.out.println("Element not found");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Stack s = new Stack(n);
+
+        for(int i = 0; i < n; i++) {
+            s.push(sc.nextInt());
+        }
+
+        int target = sc.nextInt();
+
+        s.search(target);
+    }
+}
+
+
+// 4) Stack - Display Elements in Reverse
+// Input:
+// 5
+// 11 22 33 44 55
+// Output:
+// 55 44 33 22 11
+
+import java.util.*;
+
+class Stack {
+    int top;
+    int arr[];
+    int n;
+
+    Stack(int n) {
+        this.n = n;
+        top = -1;
+        arr = new int[n];
+    }
+
+    void push(int d) {
+        if(top == n-1) {
+            System.out.println("Overflow");
+            return;
+        }
+        arr[++top] = d;
+    }
+
+    void display() {
+        for(int i = top; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Stack s = new Stack(n);
+
+        for(int i = 0; i < n; i++) {
+            s.push(sc.nextInt());
+        }
+
+        s.display();
+    }
+}
+
+
+// 5) Queue - Sum of Elements
+// Input:
+// 5
+// 10 20 30 40 50
+// Output:
+// Sum of Elements: 150
+
+import java.util.*;
+
+class Queue {
+    int front;
+    int rear;
+    int n;
+    int queue[];
+
+    Queue(int n) {
+        this.n = n;
+        front = 0;
+        rear = -1;
+        queue = new int[n];
+    }
+
+    void enqueue(int data) {
+        if(rear == n-1) {
+            System.out.println("Queue is full");
+            return;
+        }
+
+        queue[++rear] = data;
+    }
+
+    void sum() {
+        int sum = 0;
+
+        for(int i = front; i <= rear; i++) {
+            sum = sum + queue[i];
+        }
+
+        System.out.println("Sum of Elements: " + sum);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Queue q = new Queue(n);
+
+        for(int i = 0; i < n; i++) {
+            q.enqueue(sc.nextInt());
+        }
+
+        q.sum();
+    }
+}
+
+
+// 6) Queue - Search an Element
+// Input:
+// 5
+// 10 20 30 40 50
+// 40
+// Output:
+// Element found
+
+import java.util.*;
+
+class Queue {
+    int front;
+    int rear;
+    int n;
+    int queue[];
+
+    Queue(int n) {
+        this.n = n;
+        front = 0;
+        rear = -1;
+        queue = new int[n];
+    }
+
+    void enqueue(int data) {
+        if(rear == n-1) {
+            System.out.println("Queue is full");
+            return;
+        }
+
+        queue[++rear] = data;
+    }
+
+    void search(int target) {
+        for(int i = front; i <= rear; i++) {
+            if(queue[i] == target) {
+                System.out.println("Element found");
+                return;
+            }
+        }
+
+        System.out.println("Element not found");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Queue q = new Queue(n);
+
+        for(int i = 0; i < n; i++) {
+            q.enqueue(sc.nextInt());
+        }
+
+        int target = sc.nextInt();
+
+        q.search(target);
+    }
+}
+
+
+// 7) Queue - Count Positive and Negative Elements
+// Input:
+// 6
+// 10 -20 30 -40 50 -60
+// Output:
+// Positive Elements: 3
+// Negative Elements: 3
+
+import java.util.*;
+
+class Queue {
+    int front;
+    int rear;
+    int n;
+    int queue[];
+
+    Queue(int n) {
+        this.n = n;
+        front = 0;
+        rear = -1;
+        queue = new int[n];
+    }
+
+    void enqueue(int data) {
+        if(rear == n-1) {
+            System.out.println("Queue is full");
+            return;
+        }
+
+        queue[++rear] = data;
+    }
+
+    void count() {
+        int positive = 0;
+        int negative = 0;
+
+        for(int i = front; i <= rear; i++) {
+            if(queue[i] >= 0) {
+                positive++;
+            }
+            else {
+                negative++;
+            }
+        }
+
+        System.out.println("Positive Elements: " + positive);
+        System.out.println("Negative Elements: " + negative);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Queue q = new Queue(n);
+
+        for(int i = 0; i < n; i++) {
+            q.enqueue(sc.nextInt());
+        }
+
+        q.count();
+    }
+}
+
+
+// 8) Queue - Display Even Elements
+// Input:
+// 6
+// 10 15 22 33 40 55
+// Output:
+// 10 22 40
+
+import java.util.*;
+
+class Queue {
+    int front;
+    int rear;
+    int n;
+    int queue[];
+
+    Queue(int n) {
+        this.n = n;
+        front = 0;
+        rear = -1;
+        queue = new int[n];
+    }
+
+    void enqueue(int data) {
+        if(rear == n-1) {
+            System.out.println("Queue is full");
+            return;
+        }
+
+        queue[++rear] = data;
+    }
+
+    void displayEven() {
+        for(int i = front; i <= rear; i++) {
+            if(queue[i] % 2 == 0) {
+                System.out.print(queue[i] + " ");
+            }
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Queue q = new Queue(n);
+
+        for(int i = 0; i < n; i++) {
+            q.enqueue(sc.nextInt());
+        }
+
+        q.displayEven();
+    }
+}
+
+
+// 9) Stack - Find Second Largest Element
+// Input:
+// 5
+// 10 50 30 40 20
+// Output:
+// Second Largest Element: 40
+
+import java.util.*;
+
+class Stack {
+    int top;
+    int arr[];
+    int n;
+
+    Stack(int n) {
+        this.n = n;
+        top = -1;
+        arr = new int[n];
+    }
+
+    void push(int d) {
+        if(top == n-1) {
+            System.out.println("Overflow");
+            return;
+        }
+
+        arr[++top] = d;
+    }
+
+    void secondLargest() {
+        if(top < 1) {
+            System.out.println("Not enough elements");
+            return;
+        }
+
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for(int i = 0; i <= top; i++) {
+            if(arr[i] > largest) {
+                second = largest;
+                largest = arr[i];
+            }
+            else if(arr[i] > second && arr[i] != largest) {
+                second = arr[i];
+            }
+        }
+
+        System.out.println("Second Largest Element: " + second);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        Stack s = new Stack(n);
+
+        for(int i = 0; i < n; i++) {
+            s.push(sc.nextInt());
+        }
+
+        s.secondLargest();
+    }
+}
+/////////
+import java.util.*;
+class Stack {
+        int top;
+        int arr[];
+        int n;
+        Stack(int n) {
+                this.n=n;
+                this.top=-1;
+                arr = new int[n];
+        }
+        void push(int d) {
+                if(top==n-1) {
+                        System.out.print("Over flow");
+                        return;
+                }
+                arr[++top]=d;
+                return;
+        }
+        void pop() {
+                if(top==-1) {
+                        System.out.print("Under flow");
+                        return;
+                }
+                System.out.print(arr[top--]);
+                return;
+        }
+        void peek() {
+                if(top==-1) {
+                        System.out.println("Under flow");
+                        return;
+                }
+                System.out.print(arr[top]);
+                return;
+        }
+        void display() {
+                if(top==-1) {
+                        System.out.println("Stack is empty");
+                        return;
+                }
+                for(int i=top; i>=0; i--) {
+                        System.out.print(arr[i]+" ");
+                }
+                return;
+        }
+}
+class Main {
+        public static void main(String[] args) {
+                Scanner sc=new Scanner(System.in);
+                int n=sc.nextInt();
+                Stack s = new Stack(n);
+                System.out.println("1.push");
+                System.out.println("2.pop");
+                System.out.println("3.peek");
+                System.out.println("4.display");
+                System.out.println("5.exit");
+                System.out.println("Enter a choice");
+                while(true) {
+                    int a=sc.nextInt();
+                        switch(a) {
+                        case 1: {
+                                int d=sc.nextInt();
+                                s.push(d);
+                                break;
+                        }
+                        case 2: {
+                                s.pop();
+                                break;
+                        }
+                        case 3: {
+                                s.peek();
+                                break;
+                        }
+                        case 4: {
+                                s.display();
+                                break;
+                        }
+                        case 5: {
+                                System.out.println("Exit");
+                                return;
+                        }
+                        default:
+                                System.out.print("Invalid");
+                        }
+                }
+        }
+}
+//output:
+5
+1.push
+2.pop
+3.peek
+4.display
+5.exit
+Enter a choice
+3
+Under flow
+1
+90
+1
+89
+1
+56
+167
+Invalid4
+56 89 90 5
+Exit
+
+
+Queue with array
+import java.util.*;
+class Queue {
+    int front,rear;
+    int n;
+    int queue[];
+    Queue(int n){
+        this.n=n;
+        queue = new int[n];
+        front=0;
+        rear=-1;
+    }
+    void enqueue(int data){
+        if(rear==n-1){
+            System.out.println("Queue is full");
+            return;
+        }
+        rear++;
+        queue[rear]=data;
+    }
+    int dequeue(){
+        if(front>rear){
+            System.out.println("Queue is empty");
+            return -1;
+        }
+        return queue[front++];
+    }
+    void display() {
+        if(front > rear){
+            System.out.println("Queue is empty");
+            return;
+        }
+        for(int i=front;i<=rear;i++){
+            System.out.print(queue[i]+" ");
+        }
+        System.out.println();
+        return;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		Queue que=new Queue(n);
+		while(true){
+		    System.out.println("\n1.Enqueue");
+		    System.out.println("2.Dequeue");
+		    System.out.println("3.Display");
+		    System.out.println("4.exit");
+		    int value=sc.nextInt();
+		    switch(value){
+		        case 1:
+		            int a=sc.nextInt();
+		            que.enqueue(a);
+		            break;
+		        case 2:
+		            que.dequeue();
+		            break;
+		        case 3:
+		            que.display();
+		            break;
+		        case 4:
+		            return;
+		        default:
+		            System.out.println("Invalid input");
+		    }
+		}
+		
+	}
+}
+
+Output:
+5
+
+1.Enqueue
+2.Dequeue
+3.Display
+4.exit
+1
+1
+
+1.Enqueue
+2.Dequeue
+3.Display
+4.exit
+1
+2
+
+1.Enqueue
+2.Dequeue
+3.Display
+4.exit
+1
+3
+
+1.Enqueue
+2.Dequeue
+3.Display
+4.exit
+1
+4
+
+1.Enqueue
+2.Dequeue
+3.Display
+4.exit
+1
+5
+
+1.Enqueue
+2.Dequeue
+3.Display
+4.exit
+3
+1 2 3 4 5 
+
+1.Enqueue
+2.Dequeue
+3.Display
+4.exit
+4
